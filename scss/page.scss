@@ -1,0 +1,427 @@
+@charset "utf-8";
+// site common utils
+@import "../../../../assets/scss_renewal/ds_core/importer";
+@import "page_motion";
+
+// 공통 스타일
+
+.header_wrap{
+	height: 0;
+	overflow: hidden;
+}
+html[lang="ko"] .txt-disclaimer:before{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+body.fixed{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.common-modal {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: 1050;
+	@include vw-convert-mo(width, 1202/2);
+	@include vw-convert-mo(height, 694/2);
+	outline: 0;
+	//transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+	transform: translate3d(-50%, -50%, 0);
+
+	.modal-content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		border: none;
+		@include vw-convert-mo(border-radius,5);
+		text-align: center;
+		.modal-body {
+			display: flex;
+			width: 100%;
+			max-width: 100%;
+			flex: 1 1 auto;
+			padding: 0;
+			pointer-events: none;
+			align-items: center;
+			p{
+				width: 100%;
+				@include vw-font-mo('Noto Sans KR', 24, 36);
+				font-weight: 500;
+				color: #000;
+			}
+		}
+		.modal-footer{
+			display: flex;
+			align-items: center;
+			a{
+				display: block;
+				width: 100%;
+				@include vw-convert-mo(height, 220/2);
+				@include vw-font-mo('Noto Sans KR', 24, 220/2);
+				font-weight: 500;
+				color: #000;
+				background-color: #ffe400;
+				@include vw-convert-mo(border-radius,5);
+			}
+		}
+	}
+	&.show {
+		display: block;
+		animation : fadein 0.15s $ease-out-cubic;
+	}
+	&.hide {
+		animation : fadeout 0.3s $ease-in-cubic;
+	}
+}
+.common-backdrop {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1040;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(black, 1.0);
+	opacity:0.7;
+}
+
+// 콘텐츠 영역
+#content{
+	.app-root{
+		.survey-cont{
+			.inner-cont-wrap{
+				@include vw-convert-mo(padding, 0 48);
+				.intro, .complete{
+					@include vw-convert-mo(padding-top, 125);
+					.img_intro, .img_complete{
+						display: block;
+						@include vw-convert-mo(width, 146);
+						@include vw-convert-mo(height, 135);
+						@include vw-convert-mo(margin-bottom, 30);
+						background: {
+							image: url('../img/img_intro_1.jpg');
+							size: contain;
+							repeat: no-repeat;
+						};
+					}
+					h1{
+						@include vw-font-mo('Noto Sans KR', 42, 64);
+						font-weight: 700;
+						letter-spacing: -0.055em;
+						@include vw-convert-mo(margin-bottom, 54);
+					}
+					.time-info{
+						display: block;
+						@include vw-convert-mo(width, 490/2);
+						@include vw-convert-mo(height, 104/2);
+						@include vw-convert-mo(margin-bottom, 652/2);
+						color: #fff;
+						background-color: #333b58;
+						@include vw-convert-mo(border-radius, 30);
+						@include vw-font-mo('Noto Sans KR', 20, 104/2);
+						font-weight: 600;
+						letter-spacing: -0.055em;
+					}
+					.txt-info{
+						p{
+							@include vw-font-mo('Noto Sans KR', 24, 40);
+							font-weight: 500;
+							letter-spacing: -0.025em;
+							color: #444;
+							b{
+								font-weight: 600;
+							}
+						}
+					}
+					.info-cont{
+						@include vw-convert-mo(padding, 36 0 65);
+						border-top: 2px solid #eee;
+						@include vw-font-mo('Noto Sans KR', 22, 36);
+						font-weight: 400;
+						letter-spacing: -0.055em;
+						color: #8a8a8a;
+					}
+				}
+				.complete{
+					h1{
+						@include vw-convert-mo(margin-bottom, 48/2);
+					}
+					.txt-info{
+						@include vw-convert-mo(margin-bottom, 630/2);
+					}
+				}
+				.question{
+					.tit-tag{
+						display: block;
+						@include vw-convert-mo(width, 290/2);
+						@include vw-convert-mo(height, 104/2);
+						@include vw-convert-mo(border-radius, 30);
+						@include vw-convert-mo(margin-bottom, 74/2);
+						background-color: #333b58;
+						@include vw-font-mo('Noto Sans KR', 24, 104/2);
+						font-weight: 500;
+						color: #fff;
+						text-align: center;
+					}
+					h2{
+						@include vw-font-mo('Noto Sans KR', 32, 52);
+						font-weight: 600;
+						letter-spacing: -0.015em;
+					}
+					.answer{
+						li{
+							@include vw-convert-mo(padding, 72/2 0 72/2);
+							.form-check-label{
+								@include vw-font-mo('Noto Sans KR', 30, 48);
+								font-weight: 400;
+								color: #000;
+								letter-spacing: -0.035em;
+							}
+							border-top: 2px solid #eee;
+							@include vw-convert-mo(border-top-width, 2);
+							&:last-child{
+								border-bottom: 2px solid #eee;
+								@include vw-convert-mo(border-bottom-width, 2);
+							}
+						}
+					}
+				}
+			}
+			&.step-1{
+				h2{
+					@include vw-convert-mo(margin-bottom, 150/2);
+				}
+				.question{
+					@include vw-convert-mo(padding, 236/2 0 910/2);
+				}
+			}
+			&.step-2{
+				.inner-cont-wrap{
+					h2{
+						@include vw-convert-mo(margin-bottom, 150/2);
+					}
+					.question{
+						@include vw-convert-mo(padding, 236/2 0 910/2);
+						.answer{
+							li{
+								&:last-child{
+									@include vw-convert-mo(border-bottom-width, 2);
+								}
+								.text-area{
+									display: none;
+									position: relative;
+									@include vw-convert-mo(margin-top, 33);
+									textarea{
+										width: 100%;
+										@include vw-convert-mo(padding, 30 40 40 380/2);
+										@include vw-convert-mo(border-radius, 5);
+										background-color: #f7f7f7;
+										border: 2px solid #eee;
+										@include vw-convert-mo(border-width, 2);
+										@include vw-font-mo('Noto Sans KR', 30, 48);
+										font-weight: 400;
+										color: #333;
+										letter-spacing: -0.035em;
+									}
+									.textarea-label{
+										position: absolute;
+										@include vw-convert-mo(top, 45);
+										@include vw-convert-mo(left, 40);
+										@include vw-font-mo('Noto Sans KR', 24, 24);
+										font-weight: 400;
+										color: #666;
+										letter-spacing: -0.035em;
+									}
+
+								}
+							}
+						}
+					}
+				}
+			}
+			&.step-3{
+				.question{
+					@include vw-convert-mo(padding, 236/2 0 80/2);
+				}
+				h2{
+					@include vw-convert-mo(margin-bottom, 28);
+				}
+				.info-cont{
+					p{
+						@include vw-font-mo('Noto Sans KR', 24, 36);
+						font-weight: 400;
+						color: #666;
+						letter-spacing: -0.035em;
+					}
+					@include vw-convert-mo(margin-bottom, 110/2);
+				}
+				.text-area{
+					textarea{
+						width: 100%;
+						@include vw-convert-mo(padding, 30 20);
+						@include vw-convert-mo(height, 940/2);
+						background-color: #f7f7f7;
+						border: 2px solid #eee;
+						@include vw-convert-mo(border-width, 2);
+						@include vw-font-mo('Noto Sans KR', 30, 48);
+						font-weight: 400;
+						color: #333;
+						letter-spacing: -0.035em;
+						@include vw-convert-mo(border-radius, 5);
+					}
+				}
+			}
+			input[type=submit]{
+				width: 100%;
+				@include vw-convert-mo(height, 120);
+				background-color: #ffe100;
+				@include vw-font-mo('Noto Sans KR', 34, 120);
+				font-weight: 400;
+				letter-spacing: -0.055em;
+				color: #000;
+				&:disabled{
+					background-color: #e6e6e6;
+					color: rgba(0,0,0,.6);
+				}
+			}
+		}
+
+	}
+}
+
+.form-check-input {
+	position: absolute !important;
+	margin:0;
+	z-index: -1;
+	opacity: 0;
+
+	&:checked ~ .form-check-label::before {
+		color:white;
+		border-color:blue;
+		background-color:blue;
+		box-shadow:none;
+	}
+
+	&:focus ~ .form-check-label::before {
+		box-shadow:none;
+	}
+
+	&:focus:not(:checked) ~ .form-check-label::before {
+		border-color:blue;
+	}
+
+	&:not(:disabled):active ~ .form-check-label::before {
+		color:white;
+		border-color:blue;
+		background-color:blue;
+		box-shadow:none;
+	}
+
+	&:disabled {
+		~ .form-check-label {
+			color: gray;
+
+			&::before {
+				border-color: gray;
+				background-color: gray;
+			}
+		}
+	}
+}
+.form-check-label {
+	position: relative;
+	display: block;
+
+	&:before {
+		display:block;
+		content:"";
+		position:absolute;
+		pointer-events:none;
+		background:{image: url("../img/icon_none_check.png");repeat:no-repeat; position:50% 50%; size:100%;}
+	}
+	&:after {
+		display: block;
+		position: absolute;
+		content: "";
+		top: 50%;
+		background:{repeat:no-repeat; position:50% 50%; size:100%;}
+	}
+
+	&:after,
+	&:before {
+		@include vw-convert-mo(width, 112/2);
+		@include vw-convert-mo(height, 112/2);
+		right: 0;top: 50%;
+		@include transform(translate3d(0,-50%,0));
+	}
+	&:before {
+		border-color: gray;
+		@include vw-convert-mo(border-radius, 10);
+	}
+
+	.txt {
+		display:block;
+		@include vw-convert-mo(padding-right, 300/2);
+		&.small {font-size: 12px}
+		em {
+			font-weight:normal;
+			font-style:normal;
+			font-size:inherit;
+			color:blue;
+		}
+	}
+
+}
+.form-check {
+	position: relative;
+	display: block;
+	.form-check-label::before {
+		border-radius:0.125rem;
+	}
+
+	.form-check-input:checked ~ .form-check-label {
+		&::before {
+			border-color: blue;
+			background-color: blue;
+			box-shadow:none;
+		}
+		&::after {
+			background-image:url('../img/icon_check.png');
+		}
+
+		b.txt{
+			color: blue;
+		}
+	}
+
+	.form-check-input:disabled {
+		&:checked ~ .form-check-label::before {
+			background-color: blue;
+		}
+	}
+
+	&.form-check-light{
+		.form-check-label::before {
+			border-color:rgba(black, 0.2);
+		}
+		.form-check-input:checked ~ .form-check-label {
+			&::before {
+
+			}
+		}
+	}
+
+
+
+
+}

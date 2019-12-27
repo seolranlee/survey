@@ -1,0 +1,780 @@
+@charset "utf-8";
+
+/* css-transition */
+@mixin css-value-transition($value) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}transition: #{$value};
+    }
+}
+
+/* transition-delay */
+@mixin transition-delay($delay) {
+    -webkit-transition-delay: #{$delay}s;
+    -moz-transition-delay: #{$delay}s;
+    -o-transition-delaym: #{$delay}s;
+    transition-delay: #{$delay}s;
+}
+
+/* transition-duration */
+@mixin transition-duration($duration) {
+    -webkit-transition-duration: #{$duration}s;
+    -moz-transition-duration: #{$duration}s;
+    -o-transition-duration: #{$duration}s;
+    transition-duration: #{$duration}s;
+}
+
+.noTransition{ -webkit-transition: none !important;-moz-transition: none !important;-o-transition: none !important;transition: none !important; }
+
+@mixin css-transition-inout($property:all,$time:1,$delay:0){
+    $bezier: .5, 0, .5, 1;
+    @include css-transition($property,$time,$delay,$bezier);
+}
+
+
+//transition-duration과 transition-delay를 선언하기 위한 믹스인
+@mixin css-trans-duration-delay($time:1,$delay:0) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}transition-duration: #{$time};
+        #{$prefix}transition-delay: #{$delay};
+    }
+}
+
+
+// motion
+@include break-point($tablet-pc) {
+    $txtSpace : 30px;
+    $imgSpace : 2.5vw;
+    $distance : 1.5625vw;
+    $time1 : 0.3s; //transtion-duration값
+    $time2 : 0.4s;
+    $time3 : 0.7s;
+    $time4 : 1s;
+    $delay1 : 0s; //transtion-delay값
+    $delay2 : 0.45s;
+    $delay3 : 0.5s;
+    $delay4 : 0.3s;
+    .motion {
+        &.zoom-out {
+            @include opacity(1);@include transform(scale(1.15));
+            &.x2{
+                @include transform(scale(1.25));
+            }
+            &.onTrans {@include opacity(1);@include transform(scale(1));@include transform-css-transition(1.4, 0, cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1s);}
+        }
+        &.zoom-in {
+            @include opacity(0);@include transform(scale(0.95));
+            &.onTrans {@include opacity(1);@include transform(scale(1));@include transform-css-transition(1.4, 0, ease-out, opacity 1.4s);}
+        }
+        &.move-to-left{
+            @include opacity(0); @include transform(translateX($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);}
+        }
+        &.move-to-left-2{
+            @include opacity(0); @include transform(translateX($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0.2, ease-out, opacity 0.65s 0.2s linear);}
+        }
+        &.fade-in {
+            @include opacity(0);
+            &.onTrans {@include opacity(1); @include transform-css-transition(1, 0, linear, opacity 1s 0.2s linear);}
+        }
+        &.mask-off-up {
+            .img-box {
+                @include transform(translate3d(0,25%,0)); @include transform-origin(center,bottom);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        &.mask-off-left {
+            .img-box {
+                @include transform(translate3d(-25%,0,0)); @include transform-origin(left,center);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        &.mask-off-right {
+            .img-box {
+                @include transform(translate3d(25%,0,0)); @include transform-origin(right,center);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        &.mask-off-down {
+            .img-box {
+                @include transform(translate3d(0,-25%,0)); @include transform-origin(center,top);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        &.slide-in-left{
+            @include opacity(0); @include transform(translateX($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);}
+        }
+        &.slide-in-right{
+            @include opacity(0); @include transform(translateX(-$txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);}
+        }
+
+        &.slide-in-up {
+            @include opacity(0); @include transform(translateY($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateY(0)); @include transform-css-transition(0.55, 0.2, ease-out, opacity 0.55s 0.2s linear);}
+        }
+        &.slide-in-up-1{
+            @include opacity(0); @include transform(translateY($txtSpace*2));
+            &.onTrans{
+                @include opacity(1); @include transform(translateY(0));
+                @include transform-css-transition(0.8, 0, cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.8s linear);
+            }
+        }
+        &.slide-in-up-2{
+            @include opacity(0); @include transform(translateY($txtSpace));
+            &.onTrans{
+                @include opacity(1); @include transform(translateY(0));
+                @include transform-css-transition(0.6, 0.2, ease-out, opacity 0.6s 0.2s linear);
+            }
+        }
+
+        .zoom-out {
+            @include opacity(1);@include transform(scale(1.15));
+            &.x2{
+                @include transform(scale(1.25));
+            }
+        }
+        .zoom-in {
+            @include opacity(0);@include transform(scale(0.95));
+        }
+        .move-to-left{
+            @include opacity(0); @include transform(translateX($txtSpace));
+        }
+        .move-to-left-2{
+            @include opacity(0); @include transform(translateX($txtSpace));
+        }
+        .fade-in {
+            @include opacity(0);
+        }
+        .mask-off-up {
+            .img-box {
+                @include transform(translate3d(0,25%,0)); @include transform-origin(center,bottom);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        .mask-off-left {
+            .img-box {
+                @include transform(translate3d(-25%,0,0)); @include transform-origin(left,center);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        .mask-off-right {
+            .img-box {
+                @include transform(translate3d(25%,0,0)); @include transform-origin(right,center);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        .mask-off-down {
+            .img-box {
+                @include transform(translate3d(0,-25%,0)); @include transform-origin(center,top);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        .slide-in-left{
+            @include opacity(0); @include transform(translateX($txtSpace));
+        }
+        .slide-in-right{
+            @include opacity(0); @include transform(translateX(-$txtSpace));
+        }
+        .slide-in-up {
+            @include opacity(0); @include transform(translateY($txtSpace));
+        }
+        .slide-in-up-1{
+            @include opacity(0); @include transform(translateY($txtSpace*2));
+        }
+        .slide-in-up-2{
+            @include opacity(0); @include transform(translateY($txtSpace));
+        }
+        &.mask-box-1 {
+            padding-top: 18%;
+            @include opacity(0); @include transform(translateY(0));
+
+            figure {
+                @include transform(translateY(0));
+            }
+        }
+        &.mask-box-2 {
+            padding-top: 47%;
+            @include opacity(0); @include transform(translateY(0));
+
+            figure {
+                @include transform(translateY(0));
+            }
+        }
+
+        &.onTrans{
+            .zoom-out {
+                @include opacity(1);@include transform(scale(1));@include transform-css-transition(1.4, 0, ease-out, opacity 1s);
+            }
+            .zoom-in {
+                @include opacity(1);@include transform(scale(1));@include transform-css-transition(1.4, 0, ease-out, opacity 1.4s);
+            }
+            .move-to-left{
+                @include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);
+            }
+            .move-to-left-2{
+                @include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0.2, ease-out, opacity 0.65s 0.2s linear);
+            }
+            .fade-in {
+                @include opacity(1); @include transform-css-transition(1, 0, linear, opacity 1s 0.2s linear);
+            }
+            &.mask-off-up,
+            .mask-off-up {
+                .img-box{
+                    @include transform(translate3d(0,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+                &:after{
+                    @include transform(translate3d(0,-101%,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+            }
+            &.mask-off-left,
+            .mask-off-left{
+                .img-box{
+                    @include transform(translate3d(0,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+                &:after{
+                    @include transform(translate3d(101%,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+
+            }
+            &.mask-off-right,
+            .mask-off-right{
+                .img-box{
+                    @include transform(translate3d(0,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+                &:after{
+                    @include transform(translate3d(-101%,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+
+            }
+            &.mask-off-down,
+            .mask-off-down{
+                .img-box{
+                    @include transform(translate3d(0,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+                &:after{
+                    @include transform(translate3d(0,101%,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+
+            }
+            .slide-in-left{
+                @include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);
+            }
+            .slide-in-right{
+                @include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);
+            }
+            .slide-in-up {
+                @include opacity(1); @include transform(translateY(0)); @include transform-css-transition(0.55, 0.2, ease-out, opacity 0.55s 0.2s linear);
+            }
+            .slide-in-up-1{
+                @include opacity(1); @include transform(translateY(0));
+                @include transform-css-transition(0.8, 0, cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.8s linear);
+            }
+            .slide-in-up-2{
+                @include opacity(1); @include transform(translateY(0));
+                @include transform-css-transition(0.6, 0.2, ease-out, opacity 0.6s 0.2s linear);
+            }
+            .title-box {
+                &:before {@include transform(scaleY(0));@include transform-origin(left, bottom);@include transform-css-transition(1, 0, cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000));}
+                &:after {@include transform(scaleY(0));@include transform-origin(left, bottom);@include transform-css-transition(1, 0, cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000));}
+            }
+            &.mask-box-1{
+                padding-top: 25%;
+                @include transform(translateY(-$distance*2));
+                @include opacity(1);
+                @include transform-css-transition(1.3, 0.2, ease-in-out, all 1.8s 0s cubic-bezier(.22,0,.5,1));
+
+                figure {
+                    @include transform(translateY($distance*2));
+                    @include transform-css-transition(1.3, 0.2, ease-in-out, all 1.8s 0s  cubic-bezier(.22,0,.5,1));
+                }
+            }
+            &.mask-box-2{
+                padding-top: 55.5555%;
+                @include transform(translateY(-$distance*2));
+                @include opacity(1);
+                @include transform-css-transition(1.3, 0.2, ease-in-out, all 1.8s 0s cubic-bezier(.22,0,.5,1));
+
+                figure {
+                    @include transform(translateY($distance*2));
+                    @include transform-css-transition(1.3, 0.2, ease-in-out, all 1.8s 0s  cubic-bezier(.22,0,.5,1));
+                }
+            }
+
+            &.set-1 {
+                .step- {
+                    //각 스텝의 딜레이값 세팅
+                    &1 {@include css-trans-duration-delay('', $delay1);}
+                    &2 {@include css-trans-duration-delay('', $delay1 + $delay2);
+                        &.move-to-left-2{
+                            @include css-trans-duration-delay(0.65s, $delay1 + $delay2 + 0.2);
+                        }
+                    }
+                    &3 {@include css-trans-duration-delay($time3, $delay1 + $delay2 + $delay3);
+                        &.move-to-left-2{
+                            @include css-trans-duration-delay(0.65s, $delay1 + $delay2 + $delay3 + 0.2)
+                        }
+                    }
+                    &4 {@include css-trans-duration-delay($time2, $delay1 + $delay2 + $delay3 + $delay4);}
+                    &5 {@include css-trans-duration-delay($time3, $delay1 + $delay2 + $delay3 + $delay4 + $delay4);}
+                }
+            }
+            &.set-2 {
+                .step- {
+                    &1 {@include css-trans-duration-delay('', $delay1);}
+                    &2 {@include css-trans-duration-delay($time3, $delay1 + $delay2);}
+                }
+            }
+        }
+    }
+}
+@include break-point($mobile) {
+    #content{overflow: hidden}
+    //$txtSpace : 5vw;
+    $txtSpace : 5%;
+    $imgSpace : 5vw;
+    $distance : 1.5625vw;
+    $time1 : 0.3s; //transtion-duration값
+    $time2 : 0.4s;
+    $time3 : 0.7s;
+    $time4 : 1s;
+    $delay1 : 0s; //transtion-delay값
+    $delay2 : 0.45s;
+    $delay3 : 0.5s;
+    $delay4 : 0.3s;
+    .motion {
+        &.zoom-out {
+            &.x2{
+                @include transform(scale(1.25));
+            }
+            @include opacity(1);@include transform(scale(1.15));
+            &.onTrans {@include opacity(1);@include transform(scale(1));@include transform-css-transition(1.4, 0, cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1s);}
+        }
+        &.zoom-in {
+            @include opacity(0);@include transform(scale(0.95));
+            &.onTrans {@include opacity(1);@include transform(scale(1));@include transform-css-transition(1.4, 0, ease-out, opacity 1.4s);}
+        }
+        &.move-to-left{
+            @include opacity(0); @include transform(translateX($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);}
+        }
+        &.move-to-left-2{
+            @include opacity(0); @include transform(translateX($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0.2, ease-out, opacity 0.65s 0.2s linear);}
+        }
+        &.fade-in {
+            @include opacity(0);
+            &.onTrans {@include opacity(1); @include transform-css-transition(1, 0, linear, opacity 1s 0.2s linear);}
+        }
+        &.mask-off-up {
+            .img-box {
+                @include transform(translate3d(0,25%,0)); @include transform-origin(center,bottom);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        &.mask-off-left {
+            .img-box {
+                @include transform(translate3d(-25%,0,0)); @include transform-origin(left,center);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        &.mask-off-right {
+            .img-box {
+                @include transform(translate3d(25%,0,0)); @include transform-origin(right,center);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        &.mask-off-down {
+            .img-box {
+                @include transform(translate3d(0,-25%,0)); @include transform-origin(center,top);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color: #f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        &.slide-in-left{
+            @include opacity(0); @include transform(translateX($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);}
+        }
+        &.slide-in-right{
+            @include opacity(0); @include transform(translateX($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);}
+        }
+        &.slide-in-up {
+            @include opacity(0); @include transform(translateY($txtSpace));
+            &.onTrans {@include opacity(1); @include transform(translateY(0)); @include transform-css-transition(0.55, 0.2, ease-out, opacity 0.55s 0.2s linear);}
+        }
+        &.slide-in-up-1{
+            @include opacity(0); @include transform(translateY($txtSpace*2));
+            &.onTrans{
+                @include opacity(1); @include transform(translateY(0));
+                @include transform-css-transition(0.8, 0, cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.8s linear);
+            }
+        }
+        &.slide-in-up-2{
+            @include opacity(0); @include transform(translateY($txtSpace));
+            &.onTrans{
+                @include opacity(1); @include transform(translateY(0));
+                @include transform-css-transition(0.6, 0.2, ease-out, opacity 0.6s 0.2s linear);
+            }
+        }
+        &.mask-box-1 {
+            padding-top: 23vw;
+            @include opacity(0); @include transform(translateY($distance*5));
+
+            figure {
+                @include transform(translateY(0));
+            }
+        }
+        &.mask-box-2 {
+            padding-top: 53vw;
+            @include opacity(0); @include transform(translateY($distance*5));
+
+            figure {
+                @include transform(translateY(0));
+            }
+        }
+
+        .zoom-out {
+            &.x2{
+                @include transform(scale(1.25));
+            }
+            @include opacity(1);@include transform(scale(1.15));
+        }
+        .zoom-in {
+            @include opacity(0);@include transform(scale(0.95));
+        }
+        .move-to-left{
+            @include opacity(0); @include transform(translateX($txtSpace));
+        }
+        .move-to-left-2{
+            @include opacity(0); @include transform(translateX($txtSpace));
+        }
+        .fade-in {
+            @include opacity(0);
+        }
+        .mask-off-up {
+            .img-box {
+                @include transform(translate3d(0,25%,0)); @include transform-origin(center,bottom);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color:#f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        .mask-off-left {
+            .img-box {
+                @include transform(translate3d(-25%,0,0)); @include transform-origin(left,center);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color:#f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        .mask-off-right {
+            .img-box {
+                @include transform(translate3d(25%,0,0)); @include transform-origin(right,center);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color:#f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        .mask-off-down {
+            .img-box {
+                @include transform(translate3d(0,-25%,0)); @include transform-origin(center,top);
+            }
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 100%;
+                //background-color:#f0f0f0;
+                @include transform(translate3d(0,0,0));
+            }
+        }
+        .slide-in-left{
+            @include opacity(0); @include transform(translateX($txtSpace));
+        }
+        .slide-in-right{
+            @include opacity(0); @include transform(translateX(-$txtSpace));
+        }
+        .slide-in-up {
+            @include opacity(0); @include transform(translateY($txtSpace));
+        }
+        .slide-in-up-1{
+            @include opacity(0); @include transform(translateY($txtSpace*2));
+        }
+        .slide-in-up-2{
+            @include opacity(0); @include transform(translateY($txtSpace));
+        }
+
+
+        &.onTrans{
+            .zoom-out {
+                @include opacity(1);@include transform(scale(1));@include transform-css-transition(1.4, 0, ease-out, opacity 1s);
+            }
+            .zoom-in {
+                @include opacity(1);@include transform(scale(1));@include transform-css-transition(1.4, 0, ease-out, opacity 1.4s);
+            }
+            .move-to-left{
+                @include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);
+            }
+            .move-to-left-2{
+                @include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0.2, ease-out, opacity 0.65s 0.2s linear);
+            }
+            .fade-in {
+                @include opacity(1); @include transform-css-transition(1, 0, linear, opacity 1s 0.2s linear);
+            }
+            &.mask-off-up,
+            .mask-off-up {
+                .img-box{
+                    @include transform(translate3d(0,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+                &:after{
+                    @include transform(translate3d(0,-101%,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+            }
+            &.mask-off-left,
+            .mask-off-left{
+                .img-box{
+                    @include transform(translate3d(0,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+                &:after{
+                    @include transform(translate3d(101%,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+
+            }
+            &.mask-off-right,
+            .mask-off-right{
+                .img-box{
+                    @include transform(translate3d(0,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+                &:after{
+                    @include transform(translate3d(-101%,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+
+            }
+            &.mask-off-down,
+            .mask-off-down{
+                .img-box{
+                    @include transform(translate3d(0,0,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+                &:after{
+                    @include transform(translate3d(0,101%,0));
+                    @include css-transition(transform,1.2,0,'0.675, 0.005, 0.310, 1.005');
+                }
+            }
+            .slide-in-left{
+                @include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);
+            }
+            .slide-in-right{
+                @include opacity(1); @include transform(translateX(0)); @include transform-css-transition(0.65, 0, ease-out, opacity 0.65s 0s linear);
+            }
+            .slide-in-up {
+                @include opacity(1); @include transform(translateY(0)); @include transform-css-transition(0.55, 0.2, ease-out, opacity 0.55s 0.2s linear);
+            }
+            .slide-in-up-1{
+                @include opacity(1); @include transform(translateY(0));
+                @include transform-css-transition(0.8, 0, cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.8s linear);
+            }
+            .slide-in-up-2{
+                @include opacity(1); @include transform(translateY(0));
+                @include transform-css-transition(0.6, 0.2, ease-out, opacity 0.6s 0.2s linear);
+            }
+            .title-box {
+                &:before {@include transform(scaleY(0));@include transform-origin(left, bottom);@include transform-css-transition(1, 0, cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000));}
+                &:after {@include transform(scaleY(0));@include transform-origin(left, bottom);@include transform-css-transition(1, 0, cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000));}
+            }
+            &.mask-box-1{
+                padding-top: 30.9333vw;
+                @include transform(translateY(0));
+                @include opacity(1);
+                @include transform-css-transition(1.3, 0.2, ease-in-out, all 1.8s 0s cubic-bezier(.22,0,.5,1));
+
+                figure {
+                    @include transform(translateY($distance*5));
+                    @include transform-css-transition(1.3, 0.2, ease-in-out, all 1.8s 0s  cubic-bezier(.22,0,.5,1));
+                }
+            }
+            &.mask-box-2{
+                padding-top: 61.3333vw;
+                @include transform(translateY(0));
+                @include opacity(1);
+                @include transform-css-transition(1.3, 0.2, ease-in-out, all 1.8s 0s cubic-bezier(.22,0,.5,1));
+
+                figure {
+                    @include transform(translateY($distance*5));
+                    @include transform-css-transition(1.3, 0.2, ease-in-out, all 1.8s 0s  cubic-bezier(.22,0,.5,1));
+                }
+            }
+
+            &.set-1 {
+                .step- {
+                    //각 스텝의 딜레이값 세팅
+                    &1 {@include css-trans-duration-delay('', $delay1);}
+                    &2 {@include css-trans-duration-delay('', $delay1 + $delay2);
+                        &.move-to-left-2{
+                            @include css-trans-duration-delay(0.65s, $delay1 + $delay2 + 0.2);
+                        }
+                    }
+                    &3 {@include css-trans-duration-delay($time3, $delay1 + $delay2 + $delay3);
+                        &.move-to-left-2{
+                            @include css-trans-duration-delay(0.65s, $delay1 + $delay2 + $delay3 + 0.2)
+                        }
+                    }
+                    &4 {@include css-trans-duration-delay($time2, $delay1 + $delay2 + $delay3 + $delay4);}
+                    &5 {@include css-trans-duration-delay($time3, $delay1 + $delay2 + $delay3 + $delay4 + $delay4);}
+                }
+            }
+            &.set-2 {
+                .step- {
+                    &1 {@include css-trans-duration-delay('', $delay1);}
+                    &2 {@include css-trans-duration-delay($time3, $delay1 + $delay2);}
+                }
+            }
+        }
+    }
+}

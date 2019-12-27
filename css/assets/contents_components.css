@@ -1,0 +1,816 @@
+@charset "UTF-8";
+.is-full { width: 100%; }
+
+/* 컬럼 스타일 */
+.cols-container { font-size: 0; }
+
+@media only screen and (min-width: 1281px) { .ml-1-col { margin-left: 10%; }
+  .ml-2-col { margin-left: 20%; }
+  .ml-3-col { margin-left: 30%; }
+  .ml-4-col { margin-left: 40%; }
+  .ml-5-col { margin-left: 50%; }
+  .ml-6-col { margin-left: 60%; }
+  .mr-1-col { margin-right: 10%; }
+  .mr-2-col { margin-right: 20%; }
+  .mr-3-col { margin-right: 30%; }
+  .pl-1-col { padding-left: 8.75%; }
+  .pr-1-col { padding-right: 8.75%; }
+  .cols-1 { display: inline-block; width: 10%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-2 { display: inline-block; width: 20%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-3 { display: inline-block; width: 30%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-3 .pl-1-col { padding-left: 36.3636363636%; }
+  .cols-3 .pl-2-col { padding-left: 72.7272727273%; }
+  .cols-3 .pr-1-col { padding-right: 36.3636363636%; }
+  .cols-3 .pr-2-col { padding-right: 72.7272727273%; }
+  .cols-4 { display: inline-block; width: 40%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-4 .pl-1-col { padding-left: 26.6666666667%; }
+  .cols-4 .pl-2-col { padding-left: 53.3333333333%; }
+  .cols-4 .pr-1-col { padding-right: 26.6666666667%; }
+  .cols-4 .pr-2-col { padding-right: 53.3333333333%; }
+  .cols-5 { display: inline-block; width: 50%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-5 .pl-1-col { padding-left: 21.0526315789%; }
+  .cols-5 .pl-2-col { padding-left: 42.1052631579%; }
+  .cols-5 .pr-1-col { padding-right: 21.0526315789%; }
+  .cols-5 .pr-2-col { padding-right: 42.1052631579%; }
+  .cols-6 { display: inline-block; width: 60%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-6 .pl-1-col { padding-left: 17.3913043478%; }
+  .cols-6 .pl-2-col { padding-left: 34.7826086957%; }
+  .cols-6 .pr-1-col { padding-right: 17.3913043478%; }
+  .cols-6 .pr-2-col { padding-right: 34.7826086957%; }
+  .cols-7 { display: inline-block; width: 70%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-8 { display: inline-block; width: 80%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-10 { display: inline-block; width: 100%; padding: 0 0.25vw; vertical-align: top; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .ml-1-col { margin-left: 10%; }
+  .ml-2-col { margin-left: 20%; }
+  .ml-3-col { margin-left: 30%; }
+  .ml-4-col { margin-left: 40%; }
+  .ml-5-col { margin-left: 50%; }
+  .ml-6-col { margin-left: 60%; }
+  .mr-1-col { margin-right: 10%; }
+  .mr-2-col { margin-right: 20%; }
+  .mr-3-col { margin-right: 30%; }
+  .pl-1-col { padding-left: 0; }
+  .pl-2-col { padding-left: 0; }
+  .pr-1-col { padding-right: 0; }
+  .pr-2-col { padding-right: 0; }
+  .cols-1 { display: inline-block; width: 10%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-2 { display: inline-block; width: 20%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-3 { display: inline-block; width: 30%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-4 { display: inline-block; width: 40%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-5 { display: inline-block; width: 50%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-6 { display: inline-block; width: 60%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-7 { display: inline-block; width: 70%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-8 { display: inline-block; width: 80%; padding: 0 1.25vw; vertical-align: top; }
+  .cols-10 { display: inline-block; width: 100%; padding: 0 0.25vw; vertical-align: top; } }
+@media only screen and (max-width: 767.7px) { .ml-1-col { margin-left: 0; }
+  .ml-2-col { margin-left: 0; }
+  .ml-3-col { margin-left: 0; }
+  .ml-4-col { margin-left: 0; }
+  .ml-5-col { margin-left: 0; }
+  .ml-6-col { margin-left: 0; }
+  .mr-1-col { margin-right: 0; }
+  .mr-2-col { margin-right: 0; }
+  .pl-1-col { padding-left: 0; }
+  .pl-2-col { padding-left: 0; }
+  .pr-1-col { padding-right: 0; }
+  .pr-2-col { padding-right: 0; }
+  .cols-1 { display: block; width: 100%; padding: 0 8%; }
+  .cols-2 { display: block; width: 100%; padding: 0 8%; }
+  .cols-3 { display: block; width: 100%; padding: 0 8%; }
+  .cols-4 { display: block; width: 100%; padding: 0 8%; }
+  .cols-5 { display: block; width: 100%; padding: 0 8%; }
+  .cols-6 { display: block; width: 100%; padding: 0 8%; }
+  .cols-7 { display: block; width: 100%; padding: 0 8%; }
+  .cols-8 { display: block; width: 100%; padding: 0 8%; }
+  .cols-10 { display: block; width: 100%; padding: 0 8%; } }
+/*
+여백 가이드
+web | mobile
+24 | 30
+30 | 40
+60 | 60
+100 | 100
+150 | 150
+200 | 200
+300 | 300
+400 | 400 */
+/* 여백 클래스 */
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-50 { margin-top: 4.8vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-50 { margin-top: 36px; margin-top: 2.8125vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-50 { margin-top: 36px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-50.no-calc { margin-top: 6.6666666667vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-50.no-calc { margin-top: 50px; margin-top: 3.90625vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-50.no-calc { margin-top: 50px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-80 { margin-top: 8.8vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-80 { margin-top: 66px; margin-top: 5.15625vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-80 { margin-top: 66px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-80.no-calc { margin-top: 10.6666666667vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-80.no-calc { margin-top: 80px; margin-top: 6.25vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-80.no-calc { margin-top: 80px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-24 { margin-top: 1.3333333333vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-24 { margin-top: 10px; margin-top: 0.78125vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-24 { margin-top: 10px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-24.no-calc { margin-top: 3.2vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-24.no-calc { margin-top: 24px; margin-top: 1.875vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-24.no-calc { margin-top: 24px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-30 { margin-top: 2.6666666667vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-30 { margin-top: 20px; margin-top: 1.5625vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-30 { margin-top: 20px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-30.no-calc { margin-top: 4vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-30.no-calc { margin-top: 30px; margin-top: 2.34375vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-30.no-calc { margin-top: 30px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-60 { margin-top: 6.1333333333vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-60 { margin-top: 46px; margin-top: 3.59375vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-60 { margin-top: 46px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-60.no-calc { margin-top: 8vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-60.no-calc { margin-top: 60px; margin-top: 4.6875vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-60.no-calc { margin-top: 60px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-100 { margin-top: 11.4666666667vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-100 { margin-top: 86px; margin-top: 6.71875vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-100 { margin-top: 86px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-100.no-calc { margin-top: 13.3333333333vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-100.no-calc { margin-top: 100px; margin-top: 7.8125vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-100.no-calc { margin-top: 100px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-150 { margin-top: 18.1333333333vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-150 { margin-top: 136px; margin-top: 10.625vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-150 { margin-top: 136px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-150.no-calc { margin-top: 20vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-150.no-calc { margin-top: 150px; margin-top: 11.71875vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-150.no-calc { margin-top: 150px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-200 { margin-top: 24.8vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-200 { margin-top: 186px; margin-top: 14.53125vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-200 { margin-top: 186px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-200.no-calc { margin-top: 26.6666666667vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-200.no-calc { margin-top: 200px; margin-top: 15.625vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-200.no-calc { margin-top: 200px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-300 { margin-top: 38.1333333333vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-300 { margin-top: 286px; margin-top: 22.34375vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-300 { margin-top: 286px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-300.no-calc { margin-top: 40vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-300.no-calc { margin-top: 300px; margin-top: 23.4375vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-300.no-calc { margin-top: 300px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-400 { margin-top: 51.4666666667vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-400 { margin-top: 386px; margin-top: 30.15625vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-400 { margin-top: 386px; } }
+@media only screen and (min-width: 768px) and (max-width: 767.7px) { .space-mt-400.no-calc { margin-top: 53.3333333333vw; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1280px) { .space-mt-400.no-calc { margin-top: 400px; margin-top: 31.25vw; } }
+@media only screen and (min-width: 768px) and (min-width: 1281px) { .space-mt-400.no-calc { margin-top: 400px; } }
+
+@media only screen and (max-width: 767.7px) { .space-mt-50, .space-mt-50-mob-only { margin-top: 4vw; }
+  .space-mt-50.no-calc, .space-mt-50-mob-only.no-calc { margin-top: 6.6666666667vw; }
+  .space-mt-80, .space-mt-80-mob-only { margin-top: 8vw; }
+  .space-mt-80.no-calc, .space-mt-80-mob-only.no-calc { margin-top: 10.6666666667vw; }
+  .space-mt-24, .space-mt-24-mob-only { margin-top: 1.3333333333vw; }
+  .space-mt-24.no-calc, .space-mt-24-mob-only.no-calc { margin-top: 4vw; }
+  .space-mt-30, .space-mt-30-mob-only { margin-top: 2.6666666667vw; }
+  .space-mt-30.no-calc, .space-mt-30-mob-only.no-calc { margin-top: 5.3333333333vw; }
+  .space-mt-40, .space-mt-40-mob-only { margin-top: 4vw; }
+  .space-mt-40.no-calc, .space-mt-40-mob-only.no-calc { margin-top: 5.3333333333vw; }
+  .space-mt-60, .space-mt-60-mob-only { margin-top: 6.6666666667vw; }
+  .space-mt-60.no-calc, .space-mt-60-mob-only.no-calc { margin-top: 8vw; }
+  .space-mt-100, .space-mt-100-mob-only { margin-top: 10.6666666667vw; }
+  .space-mt-100.no-calc, .space-mt-100-mob-only.no-calc { margin-top: 10.6666666667vw; }
+  .space-mt-150, .space-mt-150-mob-only { margin-top: 17.3333333333vw; }
+  .space-mt-150.no-calc, .space-mt-150-mob-only.no-calc { margin-top: 20vw; }
+  .space-mt-200, .space-mt-200-mob-only { margin-top: 24vw; }
+  .space-mt-200.no-calc, .space-mt-200-mob-only.no-calc { margin-top: 26.6666666667vw; }
+  .space-mt-300, .space-mt-300-mob-only { margin-top: 37.3333333333vw; }
+  .space-mt-300.no-calc, .space-mt-300-mob-only.no-calc { margin-top: 40vw; }
+  .space-mt-400, .space-mt-400-mob-only { margin-top: 50.6666666667vw; }
+  .space-mt-400.no-calc, .space-mt-400-mob-only.no-calc { margin-top: 53.3333333333vw; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit-sample { font-size: 60px; line-height: 1.2333333333; font-family: "samsungonelatin400", "samsungonekorean400"; letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit-sample { font-size: 60px; font-size: 4.6875vw; line-height: 1.2333333333; font-family: "samsungonelatin400", "samsungonekorean400"; letter-spacing: -0.02em; } }
+@media only screen and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit-sample { font-size: 9.3333333333vw; line-height: 1.3142857143; font-family: "samsungonelatin400", "samsungonekorean400"; letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit-bold-sample { font-size: 60px; line-height: 1.2333333333; font-family: "samsungonelatin700", "samsungonekorean700"; letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit-bold-sample { font-size: 60px; font-size: 4.6875vw; line-height: 1.2333333333; font-family: "samsungonelatin700", "samsungonekorean700"; letter-spacing: -0.02em; } }
+@media only screen and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit-bold-sample { font-size: 9.3333333333vw; line-height: 1.3142857143; font-family: "samsungonelatin700", "samsungonekorean700"; letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-disclaimer-sample { font-size: 14px; line-height: 1.4285714286; font-family: "samsungonelatin400", "samsungonekorean400"; letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-disclaimer-sample { font-size: 14px; font-size: 1.09375vw; line-height: 1.4285714286; font-family: "samsungonelatin400", "samsungonekorean400"; letter-spacing: -0.04em; } }
+@media only screen and (max-width: 767.7px) { html[lang="ko"] .txt-disclaimer-sample { font-size: 3.2vw; line-height: 1.8333333333; font-family: "samsungonelatin400", "samsungonekorean400"; letter-spacing: -0.04em; } }
+
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-kv-tit-sample { font-size: 60px; line-height: 1.2333333333; font-family: "samsungonelatin400"; letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit-sample { font-size: 60px; font-size: 4.6875vw; line-height: 1.2333333333; font-family: "samsungonelatin400"; letter-spacing: -0.02em; } }
+@media only screen and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit-sample { font-size: 9.3333333333vw; line-height: 1.3142857143; font-family: "samsungonelatin400"; letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-kv-tit-bold-sample { font-size: 60px; line-height: 1.2333333333; font-family: "samsungonelatin700"; letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit-bold-sample { font-size: 60px; font-size: 4.6875vw; line-height: 1.2333333333; font-family: "samsungonelatin700"; letter-spacing: -0.02em; } }
+@media only screen and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit-bold-sample { font-size: 9.3333333333vw; line-height: 1.3142857143; font-family: "samsungonelatin700"; letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-disclaimer-sample { font-size: 14px; line-height: 1.4285714286; font-family: "samsungonelatin400"; letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-disclaimer-sample { font-size: 14px; font-size: 1.09375vw; line-height: 1.4285714286; font-family: "samsungonelatin400"; letter-spacing: -0.04em; } }
+@media only screen and (max-width: 767.7px) { html[lang="en"] .txt-disclaimer-sample { font-size: 3.2vw; line-height: 1.8333333333; font-family: "samsungonelatin400"; letter-spacing: -0.04em; } }
+
+.white-txt { color: #fff; }
+
+.black-txt { color: #000; }
+
+html[lang="ko"] { font-family: "samsungonelatin400", "samsungonekorean400"; }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-tit-regular { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit-regular.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-sub-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 3.2vw; line-height: 1.9166666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; font-size: 1.875vw; line-height: 1.9166666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; line-height: 1.9166666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; line-height: 1.9166666667; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-kv-sub-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-centered { letter-spacing: -0.02em; text-align: center; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-tit-centered.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-centered-bold { letter-spacing: -0.02em; text-align: center; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-tit-centered-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-sub-tit { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 4.8vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 36px; font-size: 2.8125vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 36px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 36px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-sub-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-sub-tit-bold { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 4.8vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 36px; font-size: 2.8125vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 36px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 36px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-sub-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-big { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 3.2vw; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; font-size: 1.875vw; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-big.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-big-bold { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 3.2vw; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 24px; font-size: 1.875vw; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-big-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small .txt-emphasize { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small-bold { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-disclaimer { display: block; position: relative; letter-spacing: -0.04em; color: #666; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-disclaimer { padding-left: 1.4666666667vw; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-disclaimer { padding-left: 11px; padding-left: 0.859375vw; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-disclaimer { padding-left: 11px; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="ko"] .txt-disclaimer { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 1.8666666667vw; line-height: 1.4285714286; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-disclaimer { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 14px; font-size: 1.09375vw; line-height: 1.4285714286; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="ko"] .txt-disclaimer { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 14px; line-height: 1.4285714286; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="ko"] .txt-disclaimer { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 14px; line-height: 1.4285714286; } }
+@media only screen and (min-width: 1281px) { html[lang="ko"] .txt-disclaimer.white-txt { color: #fff; }
+  html[lang="ko"] .txt-disclaimer:before { display: block; content: '*'; position: absolute; top: 0; left: 0; }
+  html[lang="ko"] .txt-disclaimer.align-center { padding-left: 0; }
+  html[lang="ko"] .txt-disclaimer.align-center:before { display: inline; position: static; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-tit-regular { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit-regular.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-sub-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 3.2vw; line-height: 1.9166666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; font-size: 1.875vw; line-height: 1.9166666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; line-height: 1.9166666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; line-height: 1.9166666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-kv-sub-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-centered { letter-spacing: -0.02em; text-align: center; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-centered.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-centered-bold { letter-spacing: -0.02em; text-align: center; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-tit-centered-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-sub-tit { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 4vw; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 30px; font-size: 2.34375vw; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 30px; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 30px; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-sub-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-sub-tit-bold { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 4vw; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 30px; font-size: 2.34375vw; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 30px; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 30px; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-sub-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-big { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 3.2vw; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; font-size: 1.875vw; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-big.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-big-bold { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 3.2vw; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 24px; font-size: 1.875vw; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-big-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small .txt-emphasize { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small .txt-emphasize.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small-bold { letter-spacing: -0.04em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-disclaimer { display: block; position: relative; letter-spacing: -0.04em; color: #666; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-disclaimer { padding-left: 1.4666666667vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-disclaimer { padding-left: 11px; padding-left: 0.859375vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-disclaimer { padding-left: 11px; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="ko"] .txt-disclaimer { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 1.8666666667vw; line-height: 1.4285714286; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-disclaimer { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 14px; font-size: 1.09375vw; line-height: 1.4285714286; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="ko"] .txt-disclaimer { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 14px; line-height: 1.4285714286; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="ko"] .txt-disclaimer { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 14px; line-height: 1.4285714286; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-disclaimer.white-txt { color: #fff; }
+  html[lang="ko"] .txt-disclaimer:before { display: block; content: '*'; position: absolute; top: 0; left: 0; }
+  html[lang="ko"] .txt-disclaimer.align-center { padding-left: 0; }
+  html[lang="ko"] .txt-disclaimer.align-center:before { display: inline; position: static; } }
+@media only screen and (max-width: 767.7px) { html[lang="ko"] .txt-kv-tit { font-family: "samsungonelatin200", "samsungonekorean200"; font-size: 9.3333333333vw; line-height: 1.3142857143; letter-spacing: -0.02em; }
+  html[lang="ko"] .txt-kv-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-tit-regular { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 9.3333333333vw; line-height: 1.3142857143; letter-spacing: -0.02em; }
+  html[lang="ko"] .txt-kv-tit-regular.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 9.3333333333vw; line-height: 1.3142857143; letter-spacing: -0.02em; }
+  html[lang="ko"] .txt-kv-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-kv-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 3.7333333333vw; line-height: 1.8571428571; letter-spacing: -0.02em; }
+  html[lang="ko"] .txt-kv-sub-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 7.4666666667vw; line-height: 1.3571428571; letter-spacing: -0.02em; }
+  html[lang="ko"] .txt-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 7.4666666667vw; line-height: 1.3571428571; letter-spacing: -0.02em; }
+  html[lang="ko"] .txt-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-centered { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 7.4666666667vw; line-height: 1.3571428571; letter-spacing: -0.02em; }
+  html[lang="ko"] .txt-tit-centered.white-txt { color: #fff; }
+  html[lang="ko"] .txt-tit-centered-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 7.4666666667vw; line-height: 1.3571428571; letter-spacing: -0.02em; text-align: center; }
+  html[lang="ko"] .txt-tit-centered-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-sub-tit { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 5.6vw; line-height: 1.2857142857; letter-spacing: -0.04em; }
+  html[lang="ko"] .txt-sub-tit.white-txt { color: #fff; }
+  html[lang="ko"] .txt-sub-tit-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 5.6vw; line-height: 1.2857142857; letter-spacing: -0.04em; }
+  html[lang="ko"] .txt-sub-tit-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-big { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 4.8vw; line-height: 1.5; letter-spacing: -0.04em; }
+  html[lang="ko"] .txt-paragraph-big.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-big-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 4.8vw; line-height: 1.5; letter-spacing: -0.04em; }
+  html[lang="ko"] .txt-paragraph-big-bold.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small { font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 3.7333333333vw; line-height: 1.8571428571; letter-spacing: -0.04em; }
+  html[lang="ko"] .txt-paragraph-small.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 3.7333333333vw; line-height: 1.8571428571; letter-spacing: -0.04em; }
+  html[lang="ko"] .txt-paragraph-small .txt-emphasize.white-txt { color: #fff; }
+  html[lang="ko"] .txt-paragraph-small-bold { letter-spacing: -0.04em; } }
+@media only screen and (max-width: 767.7px) and (max-width: 767.7px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 3.7333333333vw; line-height: 1.8571428571; } }
+@media only screen and (max-width: 767.7px) and (min-width: 768px) and (max-width: 1280px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 28px; font-size: 2.1875vw; line-height: 1.8571428571; } }
+@media only screen and (max-width: 767.7px) and (min-width: 1281px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 28px; line-height: 1.8571428571; } }
+@media only screen and (max-width: 767.7px) and (min-width: 2561px) { html[lang="ko"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 28px; line-height: 1.8571428571; } }
+@media only screen and (max-width: 767.7px) { html[lang="ko"] .txt-disclaimer { display: block; position: relative; padding-left: 2.4vw; font-family: "samsungonelatin400", "samsungonekorean400"; font-size: 3.2vw; line-height: 1.5833333333; letter-spacing: -0.04em; color: #666; }
+  html[lang="ko"] .txt-disclaimer.white-txt { color: #fff; }
+  html[lang="ko"] .txt-disclaimer:before { display: block; content: '*'; position: absolute; top: 0; left: 0; }
+  html[lang="ko"] .txt-disclaimer.align-center { padding-left: 0; }
+  html[lang="ko"] .txt-disclaimer.align-center:before { display: inline; position: static; } }
+
+html[lang="en"] { font-family: "samsungonelatin400"; }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-kv-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-kv-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-tit-regular { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-kv-tit-regular.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-kv-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-sub-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 3.2vw; line-height: 1.9166666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 24px; font-size: 1.875vw; line-height: 1.9166666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 24px; line-height: 1.9166666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 24px; line-height: 1.9166666667; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-kv-sub-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-centered { letter-spacing: -0.02em; text-align: center; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-tit-centered.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-centered-bold { letter-spacing: -0.02em; text-align: center; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-tit-centered-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-sub-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 4.8vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 36px; font-size: 2.8125vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 36px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 36px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-sub-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-sub-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 4.8vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 36px; font-size: 2.8125vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 36px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 36px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-sub-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-big { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 3.2vw; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 24px; font-size: 1.875vw; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-paragraph-big.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-big-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 3.2vw; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 24px; font-size: 1.875vw; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-paragraph-big-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small .txt-emphasize { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small .txt-emphasize.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-disclaimer { display: block; position: relative; letter-spacing: -0.02em; color: #9f9f9f; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-disclaimer { padding-left: 1.4666666667vw; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-disclaimer { padding-left: 11px; padding-left: 0.859375vw; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-disclaimer { padding-left: 11px; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { html[lang="en"] .txt-disclaimer { font-family: "samsungonelatin400"; font-size: 1.8666666667vw; line-height: 1.4285714286; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-disclaimer { font-family: "samsungonelatin400"; font-size: 14px; font-size: 1.09375vw; line-height: 1.4285714286; } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) { html[lang="en"] .txt-disclaimer { font-family: "samsungonelatin400"; font-size: 14px; line-height: 1.4285714286; } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { html[lang="en"] .txt-disclaimer { font-family: "samsungonelatin400"; font-size: 14px; line-height: 1.4285714286; } }
+@media only screen and (min-width: 1281px) { html[lang="en"] .txt-disclaimer.white-txt { color: #fff; }
+  html[lang="en"] .txt-disclaimer:before { display: block; content: '*'; position: absolute; top: 0; left: 0; }
+  html[lang="en"] .txt-disclaimer.align-center { padding-left: 0; }
+  html[lang="en"] .txt-disclaimer.align-center:before { display: inline; position: static; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-tit-regular { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit-regular.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 9.3333333333vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 70px; font-size: 5.46875vw; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 70px; line-height: 1.1714285714; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-sub-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 3.2vw; line-height: 1.9166666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 24px; font-size: 1.875vw; line-height: 1.9166666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 24px; line-height: 1.9166666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 24px; line-height: 1.9166666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-kv-sub-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-centered { letter-spacing: -0.02em; text-align: center; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-centered.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-centered-bold { letter-spacing: -0.02em; text-align: center; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 6.4vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 48px; font-size: 3.75vw; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 48px; line-height: 1.3333333333; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-tit-centered-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-sub-tit { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 4vw; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 30px; font-size: 2.34375vw; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 30px; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 30px; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-sub-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-sub-tit-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 4vw; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 30px; font-size: 2.34375vw; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 30px; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 30px; line-height: 1.6; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-sub-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-big { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 3.2vw; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 24px; font-size: 1.875vw; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-big.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-big-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 3.2vw; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 24px; font-size: 1.875vw; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 24px; line-height: 1.5; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-big-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small .txt-emphasize { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small .txt-emphasize.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small-bold { letter-spacing: -0.02em; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 2.4vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; font-size: 1.40625vw; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 18px; line-height: 1.6666666667; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-disclaimer { display: block; position: relative; letter-spacing: -0.02em; color: #666; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-disclaimer { padding-left: 1.4666666667vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-disclaimer { padding-left: 11px; padding-left: 0.859375vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-disclaimer { padding-left: 11px; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { html[lang="en"] .txt-disclaimer { font-family: "samsungonelatin400"; font-size: 1.8666666667vw; line-height: 1.4285714286; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-disclaimer { font-family: "samsungonelatin400"; font-size: 14px; font-size: 1.09375vw; line-height: 1.4285714286; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) { html[lang="en"] .txt-disclaimer { font-family: "samsungonelatin400"; font-size: 14px; line-height: 1.4285714286; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { html[lang="en"] .txt-disclaimer { font-family: "samsungonelatin400"; font-size: 14px; line-height: 1.4285714286; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-disclaimer.white-txt { color: #fff; }
+  html[lang="en"] .txt-disclaimer:before { display: block; content: '*'; position: absolute; top: 0; left: 0; }
+  html[lang="en"] .txt-disclaimer.align-center { padding-left: 0; }
+  html[lang="en"] .txt-disclaimer.align-center:before { display: inline; position: static; } }
+@media only screen and (max-width: 767.7px) { html[lang="en"] .txt-kv-tit { font-family: "samsungonelatin200"; font-size: 9.3333333333vw; line-height: 1.3142857143; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-kv-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-tit-regular { font-family: "samsungonelatin400"; font-size: 9.3333333333vw; line-height: 1.3142857143; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-kv-tit-regular.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-tit-bold { font-family: "samsungonelatin400"; font-size: 9.3333333333vw; line-height: 1.3142857143; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-kv-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-kv-sub-tit { font-family: "samsungonelatin400"; font-size: 3.7333333333vw; line-height: 1.8571428571; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-kv-sub-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit { font-family: "samsungonelatin400"; font-size: 7.4666666667vw; line-height: 1.3571428571; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-bold { font-family: "samsungonelatin700"; font-size: 7.4666666667vw; line-height: 1.3571428571; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-centered { font-family: "samsungonelatin400"; font-size: 7.4666666667vw; line-height: 1.3571428571; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-tit-centered.white-txt { color: #fff; }
+  html[lang="en"] .txt-tit-centered-bold { font-family: "samsungonelatin700"; font-size: 7.4666666667vw; line-height: 1.3571428571; letter-spacing: -0.02em; text-align: center; }
+  html[lang="en"] .txt-tit-centered-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-sub-tit { font-family: "samsungonelatin400"; font-size: 5.6vw; line-height: 1.2857142857; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-sub-tit.white-txt { color: #fff; }
+  html[lang="en"] .txt-sub-tit-bold { font-family: "samsungonelatin700"; font-size: 5.6vw; line-height: 1.2857142857; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-sub-tit-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-big { font-family: "samsungonelatin400"; font-size: 4.8vw; line-height: 1.5; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-paragraph-big.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-big-bold { font-family: "samsungonelatin700"; font-size: 4.8vw; line-height: 1.5; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-paragraph-big-bold.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small { font-family: "samsungonelatin400"; font-size: 3.7333333333vw; line-height: 1.8571428571; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-paragraph-small.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small .txt-emphasize { font-family: "samsungonelatin700"; font-size: 3.7333333333vw; line-height: 1.8571428571; letter-spacing: -0.02em; }
+  html[lang="en"] .txt-paragraph-small .txt-emphasize.white-txt { color: #fff; }
+  html[lang="en"] .txt-paragraph-small-bold { letter-spacing: -0.04em; } }
+@media only screen and (max-width: 767.7px) and (max-width: 767.7px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 3.7333333333vw; line-height: 1.8571428571; } }
+@media only screen and (max-width: 767.7px) and (min-width: 768px) and (max-width: 1280px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 28px; font-size: 2.1875vw; line-height: 1.8571428571; } }
+@media only screen and (max-width: 767.7px) and (min-width: 1281px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 28px; line-height: 1.8571428571; } }
+@media only screen and (max-width: 767.7px) and (min-width: 2561px) { html[lang="en"] .txt-paragraph-small-bold { font-family: "samsungonelatin700", "samsungonekorean700"; font-size: 28px; line-height: 1.8571428571; } }
+@media only screen and (max-width: 767.7px) { html[lang="en"] .txt-disclaimer { display: block; position: relative; padding-left: 2.4vw; font-family: "samsungonelatin400"; font-size: 3.2vw; line-height: 1.8333333333; letter-spacing: -0.02em; color: #666; }
+  html[lang="en"] .txt-disclaimer.white-txt { color: #fff; }
+  html[lang="en"] .txt-disclaimer:before { display: block; content: '*'; position: absolute; top: 0; left: 0; }
+  html[lang="en"] .txt-disclaimer.align-center { padding-left: 0; }
+  html[lang="en"] .txt-disclaimer.align-center:before { display: inline; position: static; } }
+/* 이미지 슬라이더 스타일 */
+.slider-container { position: relative; }
+.slider-container .bx-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: none; border: none; }
+.slider-container .bx-viewport { height: 100% !important; }
+.slider-container .slider { height: 100%; }
+.slider-container .slider .img-box { width: 100%; height: 100%; }
+.slider-container .none-click { pointer-events: none; }
+
+/* 이미지 컨테이너 스타일 */
+.img-container { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.img-container .img-box { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* 이미지 텍스트 컨테이너 스타일 */
+.img-txt-container { position: relative; overflow: hidden; }
+.img-txt-container .img-txt-box { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* 플로팅 이미지 스타일 */
+.img-float-right { float: right; }
+@media only screen and (max-width: 767.7px) { .img-float-right { float: none; } }
+
+/* 이미지 롤링 */
+.img-rolling { position: relative; overflow: hidden; }
+.img-rolling li { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* 백그라운드 이미지를 가진 컨테이너 스타일 */
+.has-bg-con { position: relative; overflow: hidden; }
+.has-bg-con .cols-container { position: relative; width: 100%; height: 100%; z-index: 2; }
+.has-bg-con .cols-container div[class^="cols-"], .has-bg-con .cols-container .is-full { position: absolute; top: 0; left: 0; height: 100%; overflow: hidden; }
+.has-bg-con .cols-container.vertical-mid-con .vertical-mid-txt { position: relative; height: auto; }
+.has-bg-con .img-container, .has-bg-con .video-container { position: absolute; top: 0; left: 0; }
+
+/* 비디오 컨테이너 */
+.video-con .alt-txt-hide { visibility: hidden; text-indent: -9999px; font-size: 0; position: absolute; top: -9999px; left: -9999px; }
+@media only screen and (min-width: 1281px) { .video-con { position: relative; }
+  .video-con .btn-play { display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; border-radius: 50%; font-size: 3.5em; background-color: rgba(255, 255, 255, 0.55); color: rgba(255, 255, 255, 0.9); } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { .video-con .btn-play { width: 22.4vw; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { .video-con .btn-play { width: 168px; width: 6.5625vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) and (max-width: 2560px) { .video-con .btn-play { width: 168px; width: 6.5625vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { .video-con .btn-play { width: 168px; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { .video-con .btn-play { height: 22.4vw; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { .video-con .btn-play { height: 168px; height: 6.5625vw; /*   @media (min-width:$psd-pc-width) { height: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) and (max-width: 2560px) { .video-con .btn-play { height: 168px; height: 6.5625vw; /*   @media (min-width:$psd-pc-width) { height: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { .video-con .btn-play { height: 168px; } }
+@media only screen and (min-width: 1281px) { .video-con .btn-play:before { display: block; position: absolute; top: 50%; left: 55%; border-style: solid; transform: translate(-50%, -50%); border-color: transparent transparent transparent #fff; } }
+@media only screen and (min-width: 1281px) and (max-width: 767.7px) { .video-con .btn-play:before { border-width: 4.4vw 0vw 4.4vw 6.6666666667vw; } }
+@media only screen and (min-width: 1281px) and (min-width: 768px) and (max-width: 1280px) { .video-con .btn-play:before { border-width: 33px 0px 33px 50px; border-width: 1.2890625vw 0vw 1.2890625vw 1.953125vw; /*  @media (min-width:$psd-pc-width) { border-width: $px; }*/ } }
+@media only screen and (min-width: 1281px) and (min-width: 1281px) and (max-width: 2560px) { .video-con .btn-play:before { border-width: 33px 0px 33px 50px; border-width: 1.2890625vw 0vw 1.2890625vw 1.953125vw; /*  @media (min-width:$psd-pc-width) { border-width: $px; }*/ } }
+@media only screen and (min-width: 1281px) and (min-width: 2561px) { .video-con .btn-play:before { border-width: 33px 0px 33px 50px; } }
+@media only screen and (min-width: 1281px) { .video-con .btn-play.type-black { background-color: rgba(0, 0, 0, 0.4); color: rgba(0, 0, 0, 0.9); } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-con { position: relative; }
+  .video-con .btn-play { display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; border-radius: 50%; font-size: 3.5em; background-color: rgba(255, 255, 255, 0.55); color: rgba(255, 255, 255, 0.9); } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { .video-con .btn-play { width: 22.4vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { .video-con .btn-play { width: 168px; width: 6.5625vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) and (max-width: 2560px) { .video-con .btn-play { width: 168px; width: 6.5625vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { .video-con .btn-play { width: 168px; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { .video-con .btn-play { height: 22.4vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { .video-con .btn-play { height: 168px; height: 6.5625vw; /*   @media (min-width:$psd-pc-width) { height: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) and (max-width: 2560px) { .video-con .btn-play { height: 168px; height: 6.5625vw; /*   @media (min-width:$psd-pc-width) { height: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { .video-con .btn-play { height: 168px; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-con .btn-play:before { display: block; position: absolute; top: 50%; left: 55%; border-style: solid; transform: translate(-50%, -50%); border-color: transparent transparent transparent #fff; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (max-width: 767.7px) { .video-con .btn-play:before { border-width: 4.4vw 0vw 4.4vw 6.6666666667vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 768px) and (max-width: 1280px) { .video-con .btn-play:before { border-width: 33px 0px 33px 50px; border-width: 1.2890625vw 0vw 1.2890625vw 1.953125vw; /*  @media (min-width:$psd-pc-width) { border-width: $px; }*/ } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 1281px) and (max-width: 2560px) { .video-con .btn-play:before { border-width: 33px 0px 33px 50px; border-width: 1.2890625vw 0vw 1.2890625vw 1.953125vw; /*  @media (min-width:$psd-pc-width) { border-width: $px; }*/ } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) and (min-width: 2561px) { .video-con .btn-play:before { border-width: 33px 0px 33px 50px; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-con .btn-play.type-black { background-color: rgba(0, 0, 0, 0.4); color: rgba(0, 0, 0, 0.9); } }
+@media only screen and (max-width: 767.7px) { .video-con { position: relative; }
+  .video-con .btn-play { display: block; position: absolute; top: 50%; left: 50%; width: 11.2vw; height: 11.2vw; transform: translate(-50%, -50%); border: none; border-radius: 50%; font-size: 3.5em; background-color: rgba(255, 255, 255, 0.55); color: rgba(255, 255, 255, 0.9); }
+  .video-con .btn-play:before { display: block; position: absolute; top: 50%; left: 55%; border-style: solid; border-width: 2.2vw 0vw 2.2vw 3.3333333333vw; transform: translate(-50%, -50%); border-color: transparent transparent transparent #fff; }
+  .video-con .btn-play.type-black { background-color: rgba(0, 0, 0, 0.4); color: rgba(0, 0, 0, 0.9); } }
+
+.video-popup { display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 999999; background-color: #000; opacity: 0; filter: alpha(opacity=0); }
+.video-popup iframe { width: 100%; height: 100%; position: absolute; top: 0; bottom: 0; right: 0; left: 0; }
+.video-popup .btn-close { position: absolute; text-indent: -999em; font-size: 0; overflow: hidden; }
+@media only screen and (max-width: 767.7px) { .video-popup .btn-close { top: 4vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-popup .btn-close { top: 30px; top: 1.171875vw; /*   @media (min-width:$psd-pc-width) { top: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (max-width: 2560px) { .video-popup .btn-close { top: 30px; top: 1.171875vw; /*   @media (min-width:$psd-pc-width) { top: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 2561px) { .video-popup .btn-close { top: 30px; } }
+@media only screen and (max-width: 767.7px) { .video-popup .btn-close { right: 4vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-popup .btn-close { right: 30px; right: 1.171875vw; /*   @media (min-width:$psd-pc-width) { right: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (max-width: 2560px) { .video-popup .btn-close { right: 30px; right: 1.171875vw; /*   @media (min-width:$psd-pc-width) { right: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 2561px) { .video-popup .btn-close { right: 30px; } }
+@media only screen and (max-width: 767.7px) { .video-popup .btn-close { width: 7.4666666667vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-popup .btn-close { width: 56px; width: 2.1875vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (max-width: 2560px) { .video-popup .btn-close { width: 56px; width: 2.1875vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 2561px) { .video-popup .btn-close { width: 56px; } }
+@media only screen and (max-width: 767.7px) { .video-popup .btn-close { height: 7.4666666667vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-popup .btn-close { height: 56px; height: 2.1875vw; /*   @media (min-width:$psd-pc-width) { height: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (max-width: 2560px) { .video-popup .btn-close { height: 56px; height: 2.1875vw; /*   @media (min-width:$psd-pc-width) { height: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 2561px) { .video-popup .btn-close { height: 56px; } }
+.video-popup .btn-close:before { display: block; content: ''; position: absolute; top: 50%; left: 50%; transform: rotate(45deg) translate(-50%, -50%); transform-origin: top left; height: 1px; background: #fff; }
+@media only screen and (max-width: 767.7px) { .video-popup .btn-close:before { width: 10.4vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-popup .btn-close:before { width: 78px; width: 3.046875vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (max-width: 2560px) { .video-popup .btn-close:before { width: 78px; width: 3.046875vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 2561px) { .video-popup .btn-close:before { width: 78px; } }
+.video-popup .btn-close:after { display: block; content: ''; position: absolute; top: 50%; left: 50%; transform: rotate(-45deg) translate(-50%, -50%); transform-origin: top left; height: 1px; background: #fff; }
+@media only screen and (max-width: 767.7px) { .video-popup .btn-close:after { width: 10.4vw; } }
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .video-popup .btn-close:after { width: 78px; width: 3.046875vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 1281px) and (max-width: 2560px) { .video-popup .btn-close:after { width: 78px; width: 3.046875vw; /*   @media (min-width:$psd-pc-width) { width: $pc-pixel*1px; }*/ } }
+@media only screen and (min-width: 2561px) { .video-popup .btn-close:after { width: 78px; } }
+
+/* 세로정렬이 항상 중앙인 텍스트 박스 */
+.vertical-mid-con { position: relative; height: 100%; overflow: hidden; font-size: 0; }
+.vertical-mid-con:before { display: inline-block; content: ''; width: 0; height: 100%; vertical-align: middle; }
+.vertical-mid-con .vertical-mid-txt { display: inline-block; position: relative; z-index: 2; vertical-align: middle; text-align: left; }
+.vertical-mid-con .img-container, .vertical-mid-con .video-container { position: absolute; top: 0; left: 0; }
+
+/* Flex를 이용한 세로 중앙 정렬 스타일 */
+.vertical-mid-align { display: flex; align-items: center; }
+@media only screen and (max-width: 767.7px) { .vertical-mid-align { display: block; } }
+
+/* Flex를 이용한 세로 중앙 정렬 스타일 */
+.vertical-mid-align-row-reverse { display: flex; align-items: center; }
+@media only screen and (max-width: 767.7px) { .vertical-mid-align-row-reverse { flex-direction: column-reverse; } }
+
+/* Flex를 이용한 세로 중앙 정렬 스타일 */
+.vertical-mid-align-row-reversed { display: flex; align-items: center; }
+@media only screen and (min-width: 768px) { .vertical-mid-align-row-reversed { flex-direction: row-reverse; } }
+@media only screen and (max-width: 767.7px) { .vertical-mid-align-row-reversed { display: block; } }
+
+/*# sourceMappingURL=contents_components.css.map */
